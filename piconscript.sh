@@ -5,16 +5,16 @@
 # opkg install curl
 ##
 
-# Directorio del script en la raíz del disco duro
+# Directorio del script en la raï¿½z del disco duro
 cd /media/hdd
 
 # URL de los picons y string del que queremos descargar
-url=https://picons.xyz/downloads
-printf "\\n -- Accediendo sobre el dominio picons.xyz y averiguando qué archivos bajar... \\n\\n"
+url=https://picons.eu/downloads
+printf "\\n -- Accediendo sobre el dominio picons.xyz y averiguando quï¿½ archivos bajar... \\n\\n"
 fileToDownload=$(curl $url/?dir=binaries-srp-full | egrep -o srp-full.220x132-220x132.light.on.transparent_[0-9]{4}\-[0-9]{2}\-[0-9]{2}\-\-[0-9]{2}\-[0-9]{2}\-[0-9]{2}.symlink.tar.xz | head -n1)
 absoluteUrl=$url/binaries-srp-full/$fileToDownload
 
-# La descarga, extracción, ubicación y borrado de basura
+# La descarga, extracciï¿½n, ubicaciï¿½n y borrado de basura
 printf "\\n -- Ahora, vamos a descargar los picons... \\n\\n"
 curl -O $absoluteUrl
 printf "\\n\\n -- Extrayendo..."
