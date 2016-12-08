@@ -9,8 +9,8 @@
 cd /media/hdd
 
 # URL de los picons y string del que queremos descargar
-url=https://picons.eu/downloads
-printf "\\n -- Accediendo sobre el dominio picons.xyz y averiguando qu� archivos bajar... \\n\\n"
+url=http://picons.eu/downloads
+printf "\\n -- Accediendo sobre el dominio picons.eu y averiguando qu� archivos bajar... \\n\\n"
 fileToDownload=$(curl $url/?dir=binaries-srp-full | egrep -o srp-full.220x132-220x132.light.on.transparent_[0-9]{4}\-[0-9]{2}\-[0-9]{2}\-\-[0-9]{2}\-[0-9]{2}\-[0-9]{2}.symlink.tar.xz | head -n1)
 absoluteUrl=$url/binaries-srp-full/$fileToDownload
 
